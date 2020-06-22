@@ -9,7 +9,7 @@ namespace Portfolio.Domain
     public class Tag
     {
         public int Id { get; set; }
-        public string title { get; set; }
+        public string Title { get; set; }
         public IList<ProjectTag> ProjectTags { get; set; }
 
     }

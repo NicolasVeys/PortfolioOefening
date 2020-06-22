@@ -18,6 +18,20 @@ namespace Portfolio.Database
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<ProjectTag>().HasKey(pt => new { pt.ProjectId, pt.TagId });
+
+            modelBuilder.Entity<Status>().HasData(new Status { Id = 1, Title = "Toekomstig project" });
+            modelBuilder.Entity<Status>().HasData(new Status { Id = 2, Title = "Huidig project" });
+            modelBuilder.Entity<Status>().HasData(new Status { Id = 3, Title = "Afgewerkt project" });
+
+
+            modelBuilder.Entity<Tag>().HasData(new Tag { Id = 1, Title = "C#" });
+            modelBuilder.Entity<Tag>().HasData(new Tag { Id = 2, Title = "ASP.NET" });
+            modelBuilder.Entity<Tag>().HasData(new Tag { Id = 3, Title = "HTML" });
+            modelBuilder.Entity<Tag>().HasData(new Tag { Id = 4, Title = "CSS" });
+            modelBuilder.Entity<Tag>().HasData(new Tag { Id = 5, Title = "WinForms" });
+            modelBuilder.Entity<Tag>().HasData(new Tag { Id = 6, Title = "Classes" });
+            modelBuilder.Entity<Tag>().HasData(new Tag { Id = 7, Title = "Javascript" });
+
         }
 
         public DbSet<Project> Projects { get; set; }
